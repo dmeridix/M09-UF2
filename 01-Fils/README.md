@@ -14,3 +14,6 @@ Fil juan = new Fil("Juan");
         pepe.start();
 ![image](https://github.com/user-attachments/assets/e7770e4a-944b-4c88-9f85-9c989047c75d)
 
+Comportament 3
+
+
