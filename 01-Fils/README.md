@@ -1,6 +1,6 @@
 Comportament 1
 Es el codi principal del repositori
-![image](https://github.com/user-attachments/assets/c43597ae-667b-48aa-9ccd-1d0cac635cdc)
+![image](https://github.com/user-attachments/assets/a5bfe5f7-d527-4a68-93f4-4b7987e009d8)
 
 Comportament 2
 Codi afegit
