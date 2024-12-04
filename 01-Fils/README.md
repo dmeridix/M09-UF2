@@ -13,7 +13,7 @@
 ## **Comportament 2**
 
 ### Descripció:
-Per a aquest comportament, hem afegit prioritat als fils. Això permet que el fil **Pepe** tingui més probabilitat d'executar-se primer que **Juan**.
+Per a aquest comportament, hem afegit prioritat als fils. Això permet que el fil **Pepe** tingui més probabilitat d'executar-se primer que **Juan** utilitzant la funció `.setPriority(5)`.
 
 ### Codi afegit:
 ```java
@@ -34,7 +34,7 @@ pepe.start();
 ## **Comportament 3**
 
 ### Descripció:
-En aquest comportament, hem garantit que els fils **Juan** i **Pepe** s'executin de manera estrictament alternada. A més, hem eliminat l'ús del mètode `setPriority` del comportament anterior.
+En aquest comportament, hem garantit que els fils **Juan** i **Pepe** s'executin amb pauses curtes utilitzant la funció `Thread.sleep(100)`. A més, hem eliminat l'ús del mètode `setPriority` del comportament anterior.
 
 ### Codi afegit:
 ```java
