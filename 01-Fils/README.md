@@ -4,11 +4,12 @@ Es el codi principal del repositori
 
 Comportament 2
 Codi afegit
-        Fil juan = new Fil("Juan");
+Fil juan = new Fil("Juan");
         Fil pepe = new Fil("Pepe");
-        
-        pepe.setPriority(Thread.MAX_PRIORITY);  <---
-        juan.setPriority(Thread.MIN_PRIORITY);  <---
+
+        pepe.setPriority(3);    <---
+        juan.setPriority(2);    <---
 
         juan.start();
         pepe.start();
+
