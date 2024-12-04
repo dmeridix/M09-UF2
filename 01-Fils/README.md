@@ -12,4 +12,5 @@ Fil juan = new Fil("Juan");
 
         juan.start();
         pepe.start();
+![image](https://github.com/user-attachments/assets/8b3e35d0-e994-4bf3-b234-9578827a1225)
 
