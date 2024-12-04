@@ -1,2 +1,13 @@
 Comportament 1
-![image](https://github.com/user-attachments/assets/6d32d06d-9220-4486-8884-cda8160246e1)
+Es el codi principal del repositori
+
+Comportament 2
+Codi afegit
+        Fil juan = new Fil("Juan");
+        Fil pepe = new Fil("Pepe");
+        
+        pepe.setPriority(Thread.MAX_PRIORITY);  <---
+        juan.setPriority(Thread.MIN_PRIORITY);  <---
+
+        juan.start();
+        pepe.start();
