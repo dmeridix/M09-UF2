@@ -12,7 +12,7 @@ public class Principal {
             juan.join();
             pepe.join();
         } catch (InterruptedException e) {
-            System.out.println("Error al aplicar el join " + e);  // Mostra error al intentar el join
+            System.out.println("Error al aplicar el join " + e);
         }
     }
 }
