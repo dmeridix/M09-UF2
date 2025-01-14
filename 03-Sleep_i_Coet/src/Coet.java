@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Coet {
-    private final Motor[] motors = new Motor[4];
+    private final Motor[] motors;
 
     public Coet() {
+        motors = new Motor[4];
         for (int i = 0; i < motors.length; i++) {
             motors[i] = new Motor(i);
-            motors[i].start();
         }
     }
 
@@ -15,15 +15,19 @@ public class Coet {
             System.err.println("Error: potència fora de rang");
             return;
         }
+        System.out.println("Passant a potència " + p);
         for (Motor motor : motors) {
             motor.setPotencia(p);
+            if (!motor.isAlive()) {
+                motor.start();
+            }
         }
     }
 
     public void arranca() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.print("Introdueix la potència objectiu (0 per sortir): ");
+            System.out.print("Introdueix la potència (0-10, 0 per acabar): ");
             int potencia = scanner.nextInt();
             if (potencia == 0) {
                 passaAPotencia(0);
@@ -32,6 +36,14 @@ public class Coet {
             passaAPotencia(potencia);
         }
         scanner.close();
+        for (Motor motor : motors) {
+            try {
+                motor.join();
+            } catch (InterruptedException e) {
+                System.err.println("Error esperant el motor ");
+            }
+        }
+        System.out.println("Programa finalitzat.");
     }
 
     public static void main(String[] args) {
