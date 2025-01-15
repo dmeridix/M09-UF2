@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 public class Treballador extends Thread{
     private int sou_anual_brut;
     private int edat_inici_treball;
