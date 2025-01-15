@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Coet {
     private final Motor[] motors;
 
