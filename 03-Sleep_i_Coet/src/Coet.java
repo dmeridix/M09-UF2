@@ -27,8 +27,8 @@ public class Coet {
 
     public void arranca() {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Introdueix la potència (0-10, 0 per acabar): ");
         while (true) {
-            System.out.print("Introdueix la potència (0-10, 0 per acabar): ");
             int potencia = scanner.nextInt();
             if (potencia == 0) {
                 passaAPotencia(0);

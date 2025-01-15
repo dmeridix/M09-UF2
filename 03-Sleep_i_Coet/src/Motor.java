@@ -15,8 +15,9 @@ public class Motor extends Thread {
 
     @Override
     public void run() {
-        Random random = new Random();
+        int interval = new Random().nextInt(2000);
         try {
+            
             while (true) {
                 if (potenciaActual < potenciaObjectiu) {
                     potenciaActual++;
@@ -30,7 +31,7 @@ public class Motor extends Thread {
                         break;
                     }
                 }
-                Thread.sleep(random.nextInt(2000) + 1000);
+                Thread.sleep(interval);
             }
         } catch (InterruptedException e) {
             System.err.println("Motor " + motorId + " interromput.");
