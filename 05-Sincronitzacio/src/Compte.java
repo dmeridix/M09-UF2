@@ -6,7 +6,7 @@ public class Compte {
         return saldo;
     }
 
-    public  void setSaldo(float saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 

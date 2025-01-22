@@ -25,9 +25,13 @@ public class Soci extends Thread{
             for (int anyactual = 0;anyactual<maxAnys;anyactual++){
                 for(int i = 0; i <12;i++){
                     if(i%2==0){
-                        comp.setSaldo(comp.getSaldo() + aportacio);
+                        synchronized (comp){
+                            comp.setSaldo(comp.getSaldo() + aportacio);
+                        }
                     }else{
-                        comp.setSaldo(comp.getSaldo() - aportacio);
+                        synchronized (comp){
+                            comp.setSaldo(comp.getSaldo() - aportacio);
+                        }
                     }
                     int interval = rnd.nextInt(esperaMax);
                     Thread.sleep(interval);
