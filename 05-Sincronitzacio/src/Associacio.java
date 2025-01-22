@@ -3,6 +3,7 @@ import java.util.Random;
 public class Associacio {
     private int numSocis;
     private Soci[] socis;
+    
     // Propiedad para despues selecionar un socio aleatorio
     private Random rnd = new Random();
 
