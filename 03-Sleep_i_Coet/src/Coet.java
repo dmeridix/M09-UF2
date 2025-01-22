@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Coet {
     private final Motor[] motors;
 
@@ -19,9 +18,6 @@ public class Coet {
         System.out.println("Passant a potència " + p);
         for (Motor motor : motors) {
             motor.setPotencia(p);
-            if (!motor.isAlive()) {
-                motor.start();
-            }
         }
     }
 
@@ -37,18 +33,16 @@ public class Coet {
             passaAPotencia(potencia);
         }
         scanner.close();
-        for (Motor motor : motors) {
-            try {
-                motor.join();
-            } catch (InterruptedException e) {
-                System.err.println("Error esperant el motor ");
-            }
-        }
         System.out.println("Programa finalitzat.");
     }
 
     public static void main(String[] args) {
         Coet coet = new Coet();
+
+        for (Motor motor : coet.motors) {
+            motor.start();
+        }
+
         coet.arranca();
     }
 }

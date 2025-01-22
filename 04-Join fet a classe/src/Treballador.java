@@ -6,7 +6,7 @@ public class Treballador extends Thread{
     private int edat_inici_treball;
     private int edat_fi_treball;
     private int edat_actual;
-    private double cobrat;
+    private float cobrat;
     private int Num;
     private Random rnd = new Random();
     
@@ -23,20 +23,20 @@ public class Treballador extends Thread{
     public int getNum() {
         return Num;
     }
-    public double getCobrat() {
+    public float getCobrat() {
         return cobrat;
     }
     public int getEdat_actual() {
         return edat_actual;
     }
     public void cobra(){
-        cobrat = cobrat + sou_anual_brut /12;
+        cobrat = cobrat + sou_anual_brut /12.0f;
     }
 
     // Mètode on resta els impostos que ha de pagar a la propietat cobrat
     public void pagaImpostos(){
-        double pagar = sou_anual_brut /12;
-        cobrat = cobrat - (pagar*0.24);
+        float pagar = sou_anual_brut /12.0f;
+        cobrat = cobrat - (pagar*0.24f);
     }
 
     // Modifiquem el run perquè per cada any es cobri i es pagui impostos cada mes
