@@ -32,7 +32,7 @@ public class Associacio {
     }
     public void mostraBalancComptes(){
         int randomNum = rnd.nextInt(numSocis);
-        System.out.println("Saldo: " + socis[randomNum].getComp().getSaldo());
+        System.out.printf("Saldo: %.2f \n",socis[randomNum].getComp().getSaldo());
     }
 
     public static void main(String[] args){

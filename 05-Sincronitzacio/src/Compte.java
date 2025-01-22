@@ -1,6 +1,6 @@
 public class Compte {
     private static Compte comp = new Compte();
-    private float saldo =0;
+    private float saldo = 0.00f;
 
     public float getSaldo() {
         return saldo;
