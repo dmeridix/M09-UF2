@@ -19,7 +19,6 @@ public class Esdeveniment {
                 System.out.println(asis.getNom() + " no ha pogut fer una reserva ja que no hi ha places disponibles.");
                 wait();
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 System.err.println(e);
             }
         }
@@ -42,7 +41,6 @@ public class Esdeveniment {
                 System.out.println(asis.getNom() + " no ha pogut cancel·lar una reserva inexistent.");
                 wait();
             } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
                 System.err.println(e);
             }
         }
