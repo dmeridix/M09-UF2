@@ -33,7 +33,7 @@ public class Assistent extends Thread {
                 Thread.sleep(rnd.nextInt(2) * 1000);
             } catch (Exception e) {
                 Thread.currentThread().interrupt();
-                System.err.println("Error en el cicle d'execucuio");
+                System.err.println("Error en el run() de l'Assistent");
             }
         }
     }
