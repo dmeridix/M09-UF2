@@ -24,7 +24,7 @@ public class Taula {
     public void showTaula() {
         for (int i = 0; i < comensals.size(); i++) {
             Filosof f = comensals.get(i);
-            System.out.println("Comensal:" + f.getNum() +
+            System.out.println("Comensal:" + f.getNom() +
                                "  esq:" + f.getForquillaEsquerra().getNumero() +
                                "  dret:" + f.getForquillaDreta().getNumero());
         }
