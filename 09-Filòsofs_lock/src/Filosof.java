@@ -58,32 +58,30 @@ public class Filosof extends Thread {
     
 
     public boolean agafarForquilles() {
-        if (agafarForquillaEsquerra()) {
-            
-        }
-        return false;
+        if (!forquillaEsquerra.bloqueig.isLocked()) {
+            if (!forquillaDreta.bloqueig.isLocked()){
+                return true;
+            }else{
+                return false;
+            }
+        }else{return false;}
     }
 
-    public boolean agafarForquillaEsquerra() {
+    public void agafarForquillaEsquerra() {
         forquillaEsquerra.agafar();
         System.out.println("Fi: " + nom + " agafa la forquilla esquerra (" + forquillaEsquerra.getNumero() + ")");
-        return true;
     }
 
-    public boolean agafarForquillaDreta() {
-        if (!forquillaDreta.bloqueig.isLocked()) {
-            forquillaDreta.agafar();
-            System.out.println("Fi: " + nom + " agafa la forquilla dreta (" + forquillaDreta.getNumero() + ")");
-            return true;
-        }
-        return false;
+    public void agafarForquillaDreta() {
+        forquillaDreta.agafar();
+        System.out.println("Fi: " + nom + " agafa la forquilla dreta (" + forquillaDreta.getNumero() + ")");
     }
 
     public void deixarForquilles() {
         forquillaDreta.deixar();
-        System.out.println(nom + " ha deixat la forquilla dreta.");
+        System.out.println("Fi" + nom + " ha deixat la forquilla dreta.");
         forquillaEsquerra.deixar();
-        System.out.println(nom + " ha deixat la forquilla esquerra.");
+        System.out.println("Fi" + nom + " ha deixat la forquilla esquerra.");
     }
 
     public void pensar() throws InterruptedException {
